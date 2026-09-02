@@ -26,53 +26,89 @@
     <a class="cta" href="contact.html">Discuss an engagement</a>
   </div>
   <section>
-    <h2>Platform and network</h2>
-    <p>Landing zone design for new estates and for estates that have already grown past the model they started with. The typical output is a high-level and low-level design covering management group hierarchy, subscription vending, hub-and-spoke or virtual WAN topology, and the policy set that keeps the structure from drifting.</p>
+    <h2>What an engagement produces</h2>
+    <p>Most requests arrive as a technology problem and turn out to be a coherence problem. The subscription model, the network drawing, the identity permissions and the operating model have drifted independently. Our work is architectural rather than task-based: we restore a design that can be explained, built and operated.</p>
     <ul class="plain">
-      <li><b>Landing zones</b> — CAF-aligned structure adapted to how the organisation actually operates, including sandbox, connectivity, identity and workload subscriptions.</li>
-      <li><b>Network topology</b> — hub-and-spoke and virtual WAN, Azure Virtual Network Manager, Network Security Perimeter, ExpressRoute, private connectivity and DNS, layer 4 and layer 7 load balancing.</li>
-      <li><b>Governance</b> — Azure Policy, tagging and naming, privileged access paths, and the operating model for change so the design survives the first year.</li>
+      <li><b>High-level and low-level design</b> — documents written so engineers can build from them and assurance functions can read them without a translation layer.</li>
+      <li><b>Decision records</b> — the options considered, the trade-offs accepted, and the places a legacy dependency forces a compromise.</li>
+      <li><b>A build path</b> — sequence, rollback, ownership and the operating model that keeps the design from drifting after handover.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Landing zones and platform structure</h2>
+    <p>Cloud Adoption Framework landing zones are useful when they are applied with judgement. We use the reference as a structure for the conversation, then adapt to what the organisation actually operates — including estates that have already grown past the model they started with.</p>
+    <ul class="plain">
+      <li><b>Management groups and subscriptions</b> — hierarchy, sandbox, connectivity, identity and workload landing zones, and subscription democratisation that does not abandon governance.</li>
+      <li><b>Policy and guardrails</b> — the policy set, tagging and naming, and the change model that keeps the structure from accumulating exceptions until nobody can draw it.</li>
+      <li><b>Operating model</b> — who vends a subscription, who owns a platform service, and how drift is detected after the design pack is signed off.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Network and connectivity</h2>
+    <p>Network design is treated as part of the platform, not as a separate drawing that identity and policy then have to work around. Hub-and-spoke and virtual WAN are chosen for the traffic and the operating model, not recited from a reference architecture.</p>
+    <ul class="plain">
+      <li><b>Topology</b> — hub-and-spoke and virtual WAN, Azure Virtual Network Manager, segmentation that can be drawn, and the boundary between platform and workload networks.</li>
+      <li><b>Private connectivity and DNS</b> — Private Link, Network Security Perimeter, DNS zones and resolution paths, including the re-pointing work that migrations actually fail on.</li>
+      <li><b>Hybrid and edge</b> — ExpressRoute, layer 4 and layer 7 load balancing, and the inspection points the security function expects to see on a diagram.</li>
     </ul>
   </section>
   <section>
     <h2>Identity and access</h2>
     <p>Entra ID architecture treated as platform, not as a collection of portal clicks. The work covers how people, guests and non-human identities are created, authorised, reviewed and retired, and how that model is expressed in Conditional Access, RBAC and entitlement management.</p>
     <ul class="plain">
-      <li><b>Directory architecture</b> — tenant design, administrative unit strategy, hybrid considerations, and the boundary between human and workload identity.</li>
+      <li><b>Directory architecture</b> — tenant design, administrative units, hybrid considerations, and the boundary between human and workload identity.</li>
       <li><b>Lifecycle</b> — joiner-mover-leaver automation, access packages, access reviews, and named ownership for service principals and managed identities.</li>
-      <li><b>Control plane</b> — Conditional Access rationalisation, privileged access, RBAC and ABAC models, external identities, and least privilege that can actually be operated.</li>
+      <li><b>Control plane</b> — Conditional Access rationalisation, privileged access, RBAC and ABAC, external identities, and least privilege that can actually be operated.</li>
     </ul>
   </section>
   <section>
-    <h2>Data, analytics and AI</h2>
-    <p>Data platforms landed with the same private networking, identity and governance expectations as the rest of the estate. Microsoft Foundry and analytics services are treated as workloads that inherit the landing zone, not as exceptions that bypass it.</p>
+    <h2>Zero Trust and security architecture</h2>
+    <p>Zero Trust is explicit verification, least privilege and assumed breach applied to identity, network, workload and data — with the compromises documented where a legacy dependency forces one. Security Adoption Framework sequencing is used so controls arrive in an order the business can absorb.</p>
     <ul class="plain">
-      <li><b>Data platforms</b> — Azure SQL and managed instances, analytics estates, storage tiers including Azure NetApp Files, backup and access models that can be explained to an auditor.</li>
-      <li><b>Foundry and AI landing</b> — private networking, managed identity, model and data governance, and a wrapper that makes the deployment operable rather than experimental.</li>
-      <li><b>Migration and consolidation</b> — SQL estate reduction, Private Link and DNS re-pointing, and cut-over sequences with a rollback position.</li>
+      <li><b>Control sequencing</b> — identity and device before network theatre, privileged access before a new tool, and an order of operations that security and delivery can both live with.</li>
+      <li><b>Well-Architected pressure</b> — reliability, security, cost, operational excellence and performance treated as competing pressures rather than a checklist to be scored in isolation.</li>
+      <li><b>Assured workloads</b> — where the design touches regulated or classified systems, it is written to be read by auditors and assurance functions as well as engineers.</li>
     </ul>
   </section>
   <section>
-    <h2>Containers and workspaces</h2>
-    <p>Container platforms and virtual desktop estates designed for the constraints the organisation actually has — including hardened baselines, air-gapped operation, and an operating model that does not assume outbound internet for day-to-day support.</p>
+    <h2>Data platforms</h2>
+    <p>Data estates landed with the same private networking, identity and governance expectations as the rest of the platform. Consolidation is treated as architecture, not as a lift of instances into a new subscription.</p>
     <ul class="plain">
-      <li><b>Kubernetes and containers</b> — cluster and platform design, registry and supply chain controls, image promotion between enclaves, and service operations for segregated environments.</li>
-      <li><b>Hardened and air-gapped</b> — no outbound connectivity, offline registry paths, classification boundaries, and runbooks that cleared staff can follow without escalating to the public cloud console.</li>
-      <li><b>Virtual desktop</b> — Azure Virtual Desktop delivered through Nerdio, with identity, network and image management aligned to the rest of the platform.</li>
+      <li><b>Azure SQL and managed instances</b> — placement, networking, backup, patching and access models that can be explained without a tribal map of exceptions.</li>
+      <li><b>Storage tiers</b> — including Azure NetApp Files, lifecycle and the identity path used to reach the data.</li>
+      <li><b>Migration and cut-over</b> — dependency mapping, Private Link and DNS re-pointing, managed identity and role assignments on the far side of a move, and a rollback position at every cut-over.</li>
     </ul>
   </section>
   <section>
-    <h2>Design, documentation and assurance</h2>
-    <p>The documents are the product as much as the diagrams. High-level and low-level designs, architecture decision records with the rejected options written down, and a build path that delivery teams can execute without reconstructing intent from a workshop recording.</p>
+    <h2>Analytics, AI and Microsoft Foundry</h2>
+    <p>Analytics platforms and Microsoft Foundry are treated as workloads that inherit the landing zone, not as exceptions that bypass it. Private networking, managed identity and a governance wrapper are part of the design, not a phase two.</p>
     <ul class="plain">
-      <li><b>Design packs</b> — HLD and LLD to a standard that engineers and assurance functions can both use, including network, identity, policy and operations.</li>
-      <li><b>Decision records</b> — trade-offs captured at the time they were made, including where a legacy dependency forces a compromise against Zero Trust or a reference framework.</li>
-      <li><b>Audit-ready writing</b> — language and structure that survive review by security, risk and audit, without substituting framework recitation for the actual design.</li>
+      <li><b>Foundry landing</b> — private endpoints, managed identity, network isolation and the control plane the platform team will actually operate.</li>
+      <li><b>Governance wrapper</b> — who may deploy a model, which data it may see, how secrets and identities are issued, and how the deployment is reviewed.</li>
+      <li><b>Analytics platforms</b> — landed on the same identity, DNS and segmentation model as the rest of the estate so they do not become a second cloud.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Containers and segregated environments</h2>
+    <p>Container platforms designed for the constraints the organisation actually has — including hardened baselines, air-gapped operation, and an operating model that does not assume outbound internet for day-to-day support.</p>
+    <ul class="plain">
+      <li><b>Kubernetes and platform design</b> — cluster topology, node and network isolation, registry and supply chain controls, and the service operations model.</li>
+      <li><b>Air-gapped and classified</b> — no outbound connectivity, offline registry, image promotion between enclaves, and runbooks that cleared staff can follow without escalating to a public console.</li>
+      <li><b>Hardened baselines</b> — the configuration the platform starts from, the exceptions that are allowed, and the evidence path when assurance asks how an image entered the environment.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Virtual desktop and workspaces</h2>
+    <p>Azure Virtual Desktop delivered as a platform service, typically through Nerdio, with identity, network and image management aligned to the rest of the estate rather than stood up as a parallel island.</p>
+    <ul class="plain">
+      <li><b>Host pools and images</b> — golden image strategy, patching, and the identity used to broker and to access the desktop.</li>
+      <li><b>Network placement</b> — private connectivity to the applications and data the desktop exists to reach, without hairpinning that nobody documented.</li>
+      <li><b>Operations</b> — scaling, FSLogix or equivalent profile design, and the ownership split between platform and the desktop service.</li>
     </ul>
   </section>
   <section>
     <h2>How we engage</h2>
-    <p>Work is contracted through SGKeystone Ltd on a statement of work with defined deliverables, milestones and acceptance criteria. Typical shapes:</p>
+    <p>Work is contracted through SGKeystone Ltd on a statement of work with defined deliverables, milestones and acceptance criteria. We can work through your preferred supplier or procurement route, including the clearance and assurance expectations that come with regulated and government-adjacent environments.</p>
     <div class="pair">
       <div><h3>Design review or assessment</h3><p>A short engagement against an existing estate or a proposed design. Findings, risks and a recommended path, written so they can be acted on rather than filed.</p></div>
       <div><h3>Architecture lead</h3><p>Embedded alongside platform, security and delivery teams for a defined period. Produces the design and stays through enough of the build to keep it honest.</p></div>
@@ -81,7 +117,6 @@
       <div><h3>Platform design and build</h3><p>Multi-month landing zone, identity or container platform work, from target architecture through implementation support and handover.</p></div>
       <div><h3>Design for others to build</h3><p>A complete design pack and decision record handed to your delivery organisation or a third party, with optional review points during build.</p></div>
     </div>
-    <p>We can work through your preferred supplier or procurement route, including the clearance and assurance expectations that come with regulated and government-adjacent environments.</p>
     <a class="cta" href="contact.html">Start a conversation</a>
   </section>
 </div>
