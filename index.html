@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGKeystone — Architecture and consulting</title>
+<meta name="description" content="Independent architecture and consulting practice for Microsoft Azure, MS Entra ID, Data platforms and container services. Landing zones, identity governance and Zero Trust design.">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="mark" href="index.html">SG<span>Keystone</span></a>
+    <nav>
+      <a class="here" href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="hero">
+    <h1>Azure platforms designed to survive the audit.</h1>
+    <p class="lead">SGKeystone is an independent architecture and consulting practice working across Microsoft Azure, Entra ID, Microsoft Foundry, Data and Analytics platforms, and Container services. We design the platform, write the documentation that explains it, and stay to see it built.</p>
+    <a class="cta" href="contact.html">Discuss an engagement</a>
+  </div>
+  <section>
+    <h2>What we do</h2>
+    <p>Most cloud estates are not short of technology. They are short of coherence — a subscription model that made sense two reorganisations ago, network segmentation that nobody can draw, identity permissions that accumulated faster than anyone could review them. That is usually the problem we are asked to fix.</p>
+    <p>Our work is architectural rather than task-based. An engagement produces a defensible design: high-level and low-level design documents, decision records with the trade-offs written down, and a build path your delivery teams can follow without guessing at intent. Where the design touches regulated or classified workloads, it is written to be read by auditors and assurance functions as well as engineers.</p>
+  </section>
+  <section>
+    <h2>Frameworks we build on</h2>
+    <p>Reference frameworks are useful when they are applied with judgement and useless when they are recited. We use them as a structure for the conversation, then adapt to what the organisation actually operates.</p>
+    <ul class="plain">
+      <li><b>Cloud Adoption Framework</b> — landing zone structure, management group hierarchy, subscription democratisation, and the governance model that keeps them from drifting.</li>
+      <li><b>Well-Architected Framework</b> — reliability, security, cost, operational excellence and performance assessed as competing pressures rather than a checklist.</li>
+      <li><b>Security Adoption Framework</b> — sequencing security work so that the controls arrive in an order the business can absorb.</li>
+      <li><b>Zero Trust</b> — explicit verification, least privilege and assumed breach applied to identity, network, workload and data, with the compromises documented where a legacy dependency forces one.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Where we work</h2>
+    <div class="pair">
+      <div><h3>Platform and network</h3><p>Azure landing zones, hub-and-spoke and virtual WAN topologies, Azure Virtual Network Manager, Network Security Perimeter, private connectivity and DNS design, ExpressRoute, and layer 4 and layer 7 load balancing.</p></div>
+      <div><h3>Identity and access</h3><p>Entra ID architecture, joiner-mover-leaver automation, RBAC and ABAC models, Conditional Access, entitlement management, identity governance, external identities, and the governance of non-human identities.</p></div>
+    </div>
+    <div class="pair">
+      <div><h3>Data, analytics and AI</h3><p>Azure SQL and managed instances, analytics platforms, storage tiers including Azure NetApp Files, and Microsoft Foundry deployments landed on private networking with managed identity and a governance wrapper.</p></div>
+      <div><h3>Containers and workspaces</h3><p>Kubernetes and container platform design including hardened and air-gapped environments, registry and supply chain controls, and Azure Virtual Desktop delivered through Nerdio.</p></div>
+    </div>
+    <p><a href="services.html">See the full scope of services</a></p>
+  </section>
+  <section>
+    <h2>Selected work</h2>
+    <p>Client names and sector detail are withheld. The following describes the shape of recent engagements.</p>
+    <div class="note"><h3>Cross-tenant migration and SQL consolidation</h3><p>An enterprise estate split across tenants after a corporate change, needing consolidation into a single Entra tenant without a service outage. The work covered dependency mapping across subscriptions, the migration sequence for Azure SQL and its supporting services, re-establishing managed identities and role assignments on the far side of the move, Private Link and DNS re-pointing, and a rollback position at every cut-over. Consolidation of the SQL estate followed, reducing the number of instances under management and putting a consistent backup, patching and access model behind them.</p></div>
+    <div class="note"><h3>Container platform for a segregated environment</h3><p>Architecture and service operations design for a container platform running in an air-gapped environment spanning several classification levels. Constraints included no outbound connectivity, an offline registry and image promotion path between enclaves, hardened baselines, and an operating model that could be run by cleared staff without escalating to the internet for support.</p></div>
+    <div class="note"><h3>Landing zone and identity governance uplift</h3><p>Reference landing zone design for a mature hub-and-spoke estate, with the policy set, network segmentation and privileged access model documented to low-level design standard. Identity workstream covered access package design in entitlement management, access reviews, Conditional Access rationalisation, and bringing service principals and managed identities under a named ownership and lifecycle model.</p></div>
+  </section>
+  <section>
+    <h2>How engagements run</h2>
+    <p>We work on a statement of work with defined deliverables and acceptance criteria, typically as an architecture lead embedded alongside your platform, security and delivery teams. Engagements range from a short design review or assessment through to a multi-month platform build, and we are equally comfortable producing the design for someone else to build or staying through implementation to keep the design honest under contact with reality.</p>
+    <a class="cta" href="contact.html">Start a conversation</a>
+  </section>
+</div>
+<footer>
+  <div class="wrap">
+    <p>SGKeystone Ltd — registered in England and Wales.</p>
+    <p><a href="mailto:sirshg@sgkeystone.com">sirshg@sgkeystone.com</a> &nbsp; +44 7707 11 7523</p>
+  </div>
+</footer>
+</body>
+</html>
